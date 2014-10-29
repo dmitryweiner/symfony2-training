@@ -1,0 +1,15 @@
+ens_jobeet_job:
+    resource: "@EnsJobeetBundle/Resources/config/routing/job.yml"
+    prefix:   /job
+
+ens_jobeet_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: EnsJobeetBundle:Default:index }
+
+EnsJobeetBundle_homepage:
+    pattern:  /
+    defaults: { _controller: EnsJobeetBundle:Job:index }
+
+EnsJobeetBundle_category:
+    pattern:  /category/{slug}/{page}
+    defaults: { _controller: EnsJobeetBundle:Category:show, page: 1 }

@@ -1,0 +1,59 @@
+job:
+    path:     /
+    defaults: { _controller: "EnsJobeetBundle:Job:index" }
+
+job_show:
+    path:     /{company}/{location}/{id}/{position}
+    defaults: { _controller: "EnsJobeetBundle:Job:show" }
+    requirements:
+        id:  \d+
+
+job_new:
+    path:     /new
+    defaults: { _controller: "EnsJobeetBundle:Job:new" }
+
+job_create:
+    path:     /create
+    defaults: { _controller: "EnsJobeetBundle:Job:create" }
+    requirements: { _method: post }
+
+job_edit:
+    path:     /{token}/edit
+    defaults: { _controller: "EnsJobeetBundle:Job:edit" }
+    requirements:
+        token:  \w+
+
+job_update:
+    path:     /{token}/update
+    defaults: { _controller: "EnsJobeetBundle:Job:update" }
+    requirements:
+        _method: post|put
+        token:  \w+
+
+
+job_delete:
+    path:     /{token}/delete
+    defaults: { _controller: "EnsJobeetBundle:Job:delete" }
+    requirements:
+        _method: post|delete
+        token:  \w+
+
+job_preview:
+    pattern: /{company}/{location}/{token}/{position}
+    defaults: { _controller: "EnsJobeetBundle:Job:preview" }
+    requirements:
+        token:  \w+
+
+job_publish:
+    pattern:  /{token}/publish
+    defaults: { _controller: "EnsJobeetBundle:Job:publish" }
+    requirements:
+        _method: post
+        token:  \w+
+
+job_extend:
+    pattern:  /{token}/extend
+    defaults: { _controller: "EnsJobeetBundle:Job:extend" }
+    requirements:
+        _method: post
+        token:  \w+
