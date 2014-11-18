@@ -77,6 +77,8 @@ parameters:
 
 sonata_admin:
     title: Jobeet Admin
+#    templates:
+#        user_block:  SonataAdminBundle::user_block.html.twig
 
 sonata_block:
     default_contexts: [cms]

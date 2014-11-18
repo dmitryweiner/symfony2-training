@@ -21,7 +21,8 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "sonata-project/admin-bundle": "~2.3",
         "sonata-project/doctrine-orm-admin-bundle": "~2.3",
-        "sonata-project/core-bundle": "~2.3"
+        "sonata-project/core-bundle": "~2.3",
+        "sonata-project/user-bundle": "~2.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
